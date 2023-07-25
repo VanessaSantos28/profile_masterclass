@@ -14,10 +14,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Color(0XFF055aa3),
+              foregroundColor: Colors.white),
+        ),
         textTheme: const TextTheme(
             displayLarge: TextStyle(fontFamily: "Poppins-Medium")),
         brightness: Brightness.dark,
-        primaryColor: const Color(0XFF055aa3),
         useMaterial3: true,
       ),
       home: const HomePage(),
