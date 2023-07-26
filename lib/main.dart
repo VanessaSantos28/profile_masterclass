@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'modules/aboutDevPage/about_dev_page.dart';
 import 'modules/animations/animations_page.dart';
 import 'modules/home/home_page.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         )),
         useMaterial3: true,
       ),
-      home: const AnimationsPage(),
+      home: const AboutDevPage(),
     );
   }
 }

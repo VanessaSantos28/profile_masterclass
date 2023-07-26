@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass_app_exercicios/ui/contants.dart';
 
 class AppBarWidget extends StatelessWidget {
   final String appBarTitle;
 
-  const AppBarWidget({super.key, required this.appBarTitle});
+  const AppBarWidget({
+    super.key,
+    required this.appBarTitle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,31 +24,20 @@ class AppBarWidget extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                appBarTitle,
-                style: const TextStyle(
-                  color: Color(0XFFEDF4F8),
-                  fontFamily: "Poppins",
-                  fontSize: 20,
-                ),
-              ),
-              const Text(
-                "Flutterando Masterclass",
-                style: TextStyle(
-                  color: Color(0XFFEDF4F8),
-                  fontFamily: "Poppins-Medium",
-                  fontSize: 12,
-                ),
-              ),
+              Text(appBarTitle, style: kHeadline1Text),
+              const Text("Flutterando Masterclass", style: kBodyText),
             ],
           ),
           const SizedBox(
-            width: 130,
+            width: 80,
           ),
-          const Icon(
-            Icons.dark_mode,
-            color: Colors.white,
-            size: 35,
+          IconButton(
+            icon: const Icon(
+              Icons.dark_mode,
+              color: kHighlightColor,
+              size: 35,
+            ),
+            onPressed: () {},
           )
         ],
       ),

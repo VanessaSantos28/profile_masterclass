@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../ui/contants.dart';
+
 class ExercisesCard extends StatelessWidget {
   const ExercisesCard({super.key});
 
@@ -15,16 +17,24 @@ class ExercisesCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(25),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               height: 33,
               width: 33,
               decoration: const BoxDecoration(
-                  color: Color(0XFF055aa3), shape: BoxShape.circle),
+                  color: kPrimaryColor, shape: BoxShape.circle),
               child: const Center(
-                child: Text("1"),
+                child: Text(
+                  "1",
+                  style: kHeadline2Text,
+                ),
               ),
             ),
+            const Text(
+              "Exercícios 01",
+              style: kHeadline2Text,
+            )
           ],
         ),
       ),

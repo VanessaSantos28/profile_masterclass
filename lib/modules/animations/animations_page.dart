@@ -12,9 +12,17 @@ class AnimationsPage extends StatelessWidget {
       backgroundColor: Color(0xff121517),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(60),
-        child: AppBarWidget(appBarTitle: "Animações"),
+        child: AppBarWidget(
+          appBarTitle: "Animações",
+        ),
       ),
-      body: ExercisesCard(),
+      body: Column(
+        children: [
+          ExercisesCard(),
+          ExercisesCard(),
+          ExercisesCard(),
+        ],
+      ),
     );
   }
 }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass_app_exercicios/ui/contants.dart';
 import 'package:masterclass_app_exercicios/widgets/bottom_button.dart';
 import 'package:masterclass_app_exercicios/widgets/card.dart';
+
+import '../../widgets/app_bar_Widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,47 +12,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff121517),
-      appBar: AppBar(
-        backgroundColor: const Color(0xff121517),
-        title: Row(
-          children: [
-            Image.asset(
-              "assets/images/logo.png",
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            const Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Atividades',
-                  style: TextStyle(
-                    color: Color(0XFFEDF4F8),
-                    fontFamily: "Poppins",
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  "Flutterando Masterclass",
-                  style: TextStyle(
-                    color: Color(0XFFEDF4F8),
-                    fontFamily: "Poppins-Medium",
-                    fontSize: 12,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              width: 130,
-            ),
-            const Icon(
-              Icons.dark_mode,
-              color: Colors.white,
-              size: 35,
-            )
-          ],
-        ),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: AppBarWidget(appBarTitle: "Animações"),
       ),
       body: const SingleChildScrollView(
         child: Column(
@@ -86,7 +51,7 @@ class HomePage extends StatelessWidget {
           Container(
             height: 46,
             width: .2,
-            color: Colors.white,
+            color: kHighlightColor,
           ),
           const BottomButton(
               buttonTitle: "Repositórios",
