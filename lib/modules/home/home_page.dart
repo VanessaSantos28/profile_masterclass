@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass_app_exercicios/widgets/bottom_button.dart';
 import 'package:masterclass_app_exercicios/widgets/card.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,7 +8,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff121517),
       appBar: AppBar(
+        backgroundColor: const Color(0xff121517),
         title: Row(
           children: [
             Image.asset(
@@ -37,6 +40,14 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(
+              width: 130,
+            ),
+            const Icon(
+              Icons.dark_mode,
+              color: Colors.white,
+              size: 35,
+            )
           ],
         ),
       ),
@@ -69,61 +80,28 @@ class HomePage extends StatelessWidget {
       bottomNavigationBar: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Container(
-            height: 80,
-            child: Column(
-              children: [
-                TextButton(
-                    onPressed: () {},
-                    child: Image.asset(
-                      "assets/images/Icon-target.png",
-                      scale: 2.2,
-                    )),
-                const Text("Atividades")
-              ],
-            ),
-          ),
+          const BottomButton(
+              buttonTitle: "Atividades",
+              buttonImage: "assets/images/Icon-target.png"),
           Container(
             height: 46,
             width: .2,
             color: Colors.white,
           ),
-          SizedBox(
-            height: 80,
-            child: Column(
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  child: Image.asset(
-                    "assets/images/github.png",
-                    scale: 9,
-                    color: const Color(0XFFEDF4F8),
-                  ),
-                ),
-                const Text("Repositórios")
-              ],
-            ),
-          ),
+          const BottomButton(
+              buttonTitle: "Repositórios",
+              buttonImage: "assets/images/github.png",
+              imageSize: 7),
           Container(
             height: 46,
             width: .2,
             color: Colors.white,
           ),
-          SizedBox(
-            height: 80,
-            child: Column(
-              children: [
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.person,
-                      color: Color(0XFFEDF4F8),
-                      size: 28,
-                    )),
-                const Text("Repositórios")
-              ],
-            ),
-          ),
+          const BottomButton(
+            buttonTitle: "Sobre dev",
+            buttonImage: "assets/images/person.png",
+            imageSize: 7,
+          )
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'modules/home.dart/home_page.dart';
+import 'modules/animations/animations_page.dart';
+import 'modules/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,17 +15,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        appBarTheme: const AppBarTheme(color: Color(0xff121517)),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0XFF055aa3),
+              backgroundColor: const Color(0XFF055aa3),
               foregroundColor: Colors.white),
         ),
         textTheme: const TextTheme(
-            displayLarge: TextStyle(fontFamily: "Poppins-Medium")),
-        brightness: Brightness.dark,
+            displayLarge: TextStyle(
+          fontFamily: "Poppins-Medium",
+        )),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const AnimationsPage(),
     );
   }
 }

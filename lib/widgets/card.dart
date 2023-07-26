@@ -41,6 +41,7 @@ class CardActivities extends StatelessWidget {
                   Text(
                     title,
                     style: const TextStyle(
+                      color: Color(0xffEDF4F8),
                       fontFamily: "Poppins",
                       fontSize: 16,
                     ),
@@ -61,7 +62,7 @@ class CardActivities extends StatelessWidget {
                               style: const TextStyle(
                                   fontFamily: "Montserrat",
                                   fontSize: 12,
-                                  color: Colors.white))
+                                  color: Color(0xffEDF4F8)))
                         ]),
                   ),
                 ],
@@ -88,7 +89,7 @@ class CardActivities extends StatelessWidget {
                         BoxDecoration(borderRadius: BorderRadius.circular(30)),
                     child: Image.asset(
                       "assets/images/github.png",
-                      color: Colors.white,
+                      color: Color(0xffEDF4F8),
                     ),
                   ),
                   const SizedBox(
@@ -96,10 +97,13 @@ class CardActivities extends StatelessWidget {
                   ),
                   const Text(
                     "Acessar código fonte",
-                    style: TextStyle(fontSize: 12, fontFamily: "Montserrat"),
+                    style: TextStyle(
+                        fontSize: 12,
+                        fontFamily: "Montserrat",
+                        color: Color(0xffEDF4F8)),
                   ),
                   const SizedBox(
-                    width: 70,
+                    width: 78,
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
