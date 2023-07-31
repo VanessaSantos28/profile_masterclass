@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass_app_exercicios/ui/contants.dart';
-
-import '../modules/aboutDevPage/icons_image.dart';
+import 'package:masterclass_app_exercicios/shared/contants.dart';
+import '../shared/app_images.dart';
 
 class PerfilCard extends StatelessWidget {
   const PerfilCard({super.key});
@@ -9,6 +8,7 @@ class PerfilCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: const EdgeInsets.all(14),
       color: kCardColor,
       child: Container(
         padding: const EdgeInsets.all(23),
@@ -45,33 +45,38 @@ class PerfilCard extends StatelessWidget {
             const Text(
               "Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet congue consequat. In posuere, nunc sit amet laoreet blandit, urna sapien.",
               style: kDescriptionText,
+              textAlign: TextAlign.center,
             ),
             const SizedBox(
               height: 35,
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconsImage(
-                  iconImage: 'assets/images/Icon-whatsapp.png',
+                Image.asset(
+                  AppImages.wppLogo,
+                  scale: 2,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 25,
                 ),
-                IconsImage(
-                  iconImage: 'assets/images/Icon-github.png',
+                Image.asset(
+                  AppImages.githubIcon,
+                  scale: 2,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 25,
                 ),
-                IconsImage(
-                  iconImage: 'assets/images/Icon-instagram.png',
+                Image.asset(
+                  AppImages.instagram,
+                  scale: 2,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 25,
                 ),
-                IconsImage(
-                  iconImage: 'assets/images/Icon-facebook.png',
+                Image.asset(
+                  AppImages.facebook,
+                  scale: 2,
                 ),
               ],
             ),

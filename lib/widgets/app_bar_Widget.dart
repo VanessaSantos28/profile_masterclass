@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass_app_exercicios/ui/contants.dart';
+import 'package:masterclass_app_exercicios/shared/contants.dart';
 
 class AppBarWidget extends StatelessWidget {
   final String appBarTitle;

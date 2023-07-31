@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../ui/contants.dart';
+import '../../shared/contants.dart';
 import '../../widgets/app_bar_Widget.dart';
 import '../../widgets/perfil_card.dart';
+import 'favorite_technologies.dart';
 
-class AboutDevPage extends StatelessWidget {
-  const AboutDevPage({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +15,15 @@ class AboutDevPage extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: AppBarWidget(
-          appBarTitle: 'Sobre Dev',
+          appBarTitle: 'Sobre o dev',
         ),
       ),
-      body: PerfilCard(),
+      body: Column(
+        children: [
+          PerfilCard(),
+          FavoriteTechnologies(),
+        ],
+      ),
     );
   }
 }

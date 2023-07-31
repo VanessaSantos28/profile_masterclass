@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../ui/contants.dart';
+import '../shared/contants.dart';
 
 class ExercisesCard extends StatelessWidget {
   const ExercisesCard({super.key});
@@ -9,7 +9,7 @@ class ExercisesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: const EdgeInsets.all(8),
-      color: const Color(0xff172026),
+      color: kCardColor,
       child: Container(
         padding: const EdgeInsets.all(8),
         height: 64,
