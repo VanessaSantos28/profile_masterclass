@@ -12,4 +12,5 @@ class AppImages {
   static String wppLogo = "assets/images/Icon-whatsapp.png";
   static String masterclassLogo = "assets/images/masterclass-logo.png";
   static String person = "assets/images/person.png";
+  static String arrow = "assets/images/Icon-arrow-back.png";
 }

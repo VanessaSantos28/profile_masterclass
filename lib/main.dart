@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:masterclass_app_exercicios/shared/contants.dart';
+import 'package:masterclass_app_exercicios/modules/home/home_page.dart';
 
-import 'modules/aboutDevPage/profile_page.dart';
+import 'package:masterclass_app_exercicios/shared/contants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        iconButtonTheme: const IconButtonThemeData(
+            style: ButtonStyle(
+                foregroundColor: MaterialStatePropertyAll(kHighlightColor))),
         appBarTheme: const AppBarTheme(color: kBackgroundColor),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
@@ -24,7 +27,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
         useMaterial3: true,
       ),
-      home: const ProfilePage(),
+      home: const HomePage(),
     );
   }
 }

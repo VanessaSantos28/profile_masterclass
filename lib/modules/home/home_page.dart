@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:masterclass_app_exercicios/shared/app_images.dart';
-import 'package:masterclass_app_exercicios/shared/contants.dart';
+
 import 'package:masterclass_app_exercicios/widgets/bottom_button.dart';
 import 'package:masterclass_app_exercicios/widgets/card.dart';
-
 import '../../widgets/app_bar_Widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,7 +14,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: const Color(0xff121517),
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
-        child: AppBarWidget(appBarTitle: "Animações"),
+        child: AppBarWidget(appBarTitle: "Atividades"),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -43,32 +42,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          BottomButton(
-              buttonTitle: "Atividades", buttonImage: AppImages.target),
-          Container(
-            height: 46,
-            width: .2,
-            color: kHighlightColor,
-          ),
-          BottomButton(
-              buttonTitle: "Repositórios",
-              buttonImage: AppImages.github,
-              imageSize: 7),
-          Container(
-            height: 46,
-            width: .2,
-            color: Colors.white,
-          ),
-          BottomButton(
-            buttonTitle: "Sobre dev",
-            buttonImage: AppImages.person,
-            imageSize: 7,
-          )
-        ],
-      ),
+      bottomNavigationBar: const BottomButton(),
     );
   }
 }

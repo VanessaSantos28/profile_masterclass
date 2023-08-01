@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masterclass_app_exercicios/shared/contants.dart';
-import '../shared/app_images.dart';
+import '../../shared/app_images.dart';
 
 class PerfilCard extends StatelessWidget {
   const PerfilCard({super.key});
@@ -8,7 +8,6 @@ class PerfilCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.all(14),
       color: kCardColor,
       child: Container(
         padding: const EdgeInsets.all(23),

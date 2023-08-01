@@ -1,36 +1,45 @@
 import 'package:flutter/material.dart';
 
-class BottomButton extends StatelessWidget {
-  final String buttonTitle;
-  final String buttonImage;
-  final double? imageSize;
+import '../shared/app_images.dart';
+import '../shared/button.dart';
 
-  const BottomButton(
-      {super.key,
-      required this.buttonTitle,
-      required this.buttonImage,
-      this.imageSize});
+class BottomButton extends StatelessWidget {
+  const BottomButton({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 80,
-      child: Column(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          TextButton(
-              onPressed: () {},
-              child: Image.asset(
-                buttonImage,
-                scale: imageSize,
-                color: const Color(0xffEDF4F8),
-              )),
-          Text(
-            buttonTitle,
-            style: const TextStyle(
-                color: Color(0xffEDF4F8),
-                fontSize: 12,
-                fontFamily: "Montserrat"),
-          )
+          Button(
+            iconImage: AppImages.target,
+            title: 'Atividades',
+            imageSize: 1,
+          ),
+          Container(
+            height: 46,
+            width: .2,
+            color: Colors.white,
+          ),
+          Button(
+            iconImage: AppImages.githubIcon,
+            title: "Repositórios",
+            imageSize: 2,
+          ),
+          Container(
+            height: 46,
+            width: .2,
+            color: Colors.white,
+          ),
+          Button(
+            iconImage: AppImages.person,
+            title: "Sobre o Dev",
+            imageSize: 7,
+          ),
         ],
       ),
     );

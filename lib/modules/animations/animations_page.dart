@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/app_bar_Widget.dart';
+import '../../shared/contants.dart';
+
 import '../../widgets/exercises_card.dart';
 
 class AnimationsPage extends StatelessWidget {
@@ -8,15 +9,32 @@ class AnimationsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xff121517),
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
-        child: AppBarWidget(
-          appBarTitle: "Animações",
+    return Scaffold(
+      backgroundColor: kBackgroundColor,
+      appBar: AppBar(
+        backgroundColor: kBackgroundColor,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Animações", style: kHeadline1Text),
+                Text("Flutterando Masterclass", style: kBodyText),
+              ],
+            ),
+            IconButton(
+              icon: const Icon(
+                Icons.dark_mode,
+                color: kHighlightColor,
+                size: 35,
+              ),
+              onPressed: () {},
+            )
+          ],
         ),
       ),
-      body: Column(
+      body: const Column(
         children: [
           ExercisesCard(),
           ExercisesCard(),

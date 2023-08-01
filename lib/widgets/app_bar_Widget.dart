@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass_app_exercicios/shared/app_images.dart';
 import 'package:masterclass_app_exercicios/shared/contants.dart';
 
 class AppBarWidget extends StatelessWidget {
@@ -12,11 +13,12 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: const Color(0xff121517),
+      backgroundColor: kBackgroundColor,
       title: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Image.asset(
-            "assets/images/logo.png",
+            AppImages.logo,
           ),
           const SizedBox(
             width: 10,

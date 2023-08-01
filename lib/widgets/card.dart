@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass_app_exercicios/shared/app_images.dart';
+import 'package:masterclass_app_exercicios/shared/contants.dart';
+
+import '../modules/animations/animations_page.dart';
 
 class CardActivities extends StatelessWidget {
   final String title;
@@ -31,7 +35,7 @@ class CardActivities extends StatelessWidget {
                     width: 43,
                     height: 43,
                     decoration: BoxDecoration(
-                        color: const Color(0XFF055aa3),
+                        color: kPrimaryColor,
                         borderRadius: BorderRadius.circular(30)),
                     child: Image.asset(imageCardTitle),
                   ),
@@ -40,11 +44,7 @@ class CardActivities extends StatelessWidget {
                   ),
                   Text(
                     title,
-                    style: const TextStyle(
-                      color: Color(0xffEDF4F8),
-                      fontFamily: "Poppins",
-                      fontSize: 16,
-                    ),
+                    style: kHeadline2Text,
                   ),
                   const SizedBox(
                     width: 70,
@@ -52,17 +52,14 @@ class CardActivities extends StatelessWidget {
                   Text.rich(
                     TextSpan(
                         text: "Exercícios: ",
-                        style: const TextStyle(
-                            fontFamily: "Montserrat",
-                            color: Color(0xFF51565a),
-                            fontSize: 12),
+                        style: kDescriptionText,
                         children: <TextSpan>[
                           TextSpan(
                               text: numberExercises.toString(),
                               style: const TextStyle(
                                   fontFamily: "Montserrat",
                                   fontSize: 12,
-                                  color: Color(0xffEDF4F8)))
+                                  color: kHighlightColor))
                         ]),
                   ),
                 ],
@@ -75,7 +72,7 @@ class CardActivities extends StatelessWidget {
                 style: const TextStyle(
                     fontFamily: "Montserrat",
                     fontSize: 14,
-                    color: Color(0xFF51565a)),
+                    color: kDescriptionColor),
               ),
               const SizedBox(
                 height: 30,
@@ -88,8 +85,8 @@ class CardActivities extends StatelessWidget {
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(30)),
                     child: Image.asset(
-                      "assets/images/github.png",
-                      color: Color(0xffEDF4F8),
+                      AppImages.github,
+                      color: kHighlightColor,
                     ),
                   ),
                   const SizedBox(
@@ -100,7 +97,7 @@ class CardActivities extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 12,
                         fontFamily: "Montserrat",
-                        color: Color(0xffEDF4F8)),
+                        color: kHighlightColor),
                   ),
                   const SizedBox(
                     width: 78,
@@ -109,12 +106,17 @@ class CardActivities extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AnimationsPage()));
+                    },
                     child: const Text(
                       "Ver mais",
                       style: TextStyle(
-                        fontFamily: "Poppins",
                         fontSize: 12,
+                        color: kHighlightColor,
                       ),
                     ),
                   ),
