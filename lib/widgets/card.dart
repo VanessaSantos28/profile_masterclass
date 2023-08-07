@@ -21,14 +21,16 @@ class CardActivities extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
-        color: const Color(0xFF172026),
+        color: kCardColor,
         child: Container(
           padding: const EdgeInsets.all(8),
           width: 400,
           height: 220,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
                     padding: const EdgeInsets.all(5),

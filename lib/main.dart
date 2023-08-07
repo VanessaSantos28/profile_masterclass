@@ -4,6 +4,8 @@ import 'package:masterclass_app_exercicios/modules/home/home_page.dart';
 
 import 'package:masterclass_app_exercicios/shared/contants.dart';
 
+import 'modules/splash/splash_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -27,7 +29,11 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      initialRoute: '/splash',
+      routes: {
+        '/splash': (_) => const SplashPage(),
+        '/homePage': (_) => HomePage(),
+      },
     );
   }
 }

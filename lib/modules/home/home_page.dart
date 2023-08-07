@@ -6,7 +6,29 @@ import 'package:masterclass_app_exercicios/widgets/card.dart';
 import '../../widgets/app_bar_Widget.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  final modelsCard = [
+    CardActivities(
+      title: "Animações",
+      description:
+          "Estudos sobre animações implícitas e controladas, contendo 4 exercícios e 2 estudos",
+      numberExercises: 4,
+      imageCardTitle: AppImages.running,
+    ),
+    CardActivities(
+      title: "Leitura de Mockup",
+      description:
+          "Aplicação da técnica de leitura de mockup, contendo 2 exercícios",
+      numberExercises: 2,
+      imageCardTitle: AppImages.glassesIcon,
+    ),
+    CardActivities(
+      title: "Playground",
+      description: "Ambiente destinado a testes e estudos em geral",
+      numberExercises: 3,
+      imageCardTitle: AppImages.toys,
+    ),
+  ];
+  HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,30 +39,7 @@ class HomePage extends StatelessWidget {
         child: AppBarWidget(appBarTitle: "Atividades"),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            CardActivities(
-              title: "Animações",
-              description:
-                  "Estudos sobre animações implícitas e controladas, contendo 4 exercícios e 2 estudos",
-              numberExercises: 4,
-              imageCardTitle: AppImages.running,
-            ),
-            CardActivities(
-              title: "Leitura de Mockup",
-              description:
-                  "Aplicação da técnica de leitura de mockup, contendo 2 exercícios",
-              numberExercises: 2,
-              imageCardTitle: AppImages.glassesIcon,
-            ),
-            CardActivities(
-              title: "Playground",
-              description: "Ambiente destinado a testes e estudos em geral",
-              numberExercises: 3,
-              imageCardTitle: AppImages.toys,
-            ),
-          ],
-        ),
+        child: Column(children: modelsCard),
       ),
       bottomNavigationBar: const BottomButton(),
     );

@@ -27,7 +27,7 @@ class Button extends StatelessWidget {
               if (iconImage == AppImages.target) {
                 Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
+                    MaterialPageRoute(builder: (context) => HomePage()),
                     (route) => false);
               } else if (iconImage == AppImages.githubIcon) {
                 Navigator.pushAndRemoveUntil(
