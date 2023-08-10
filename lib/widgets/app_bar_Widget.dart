@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:masterclass_app_exercicios/shared/app_images.dart';
 import 'package:masterclass_app_exercicios/shared/contants.dart';
 
+import 'mood_button.dart';
+
 class AppBarWidget extends StatelessWidget {
   final String appBarTitle;
 
@@ -33,14 +35,7 @@ class AppBarWidget extends StatelessWidget {
           const SizedBox(
             width: 80,
           ),
-          IconButton(
-            icon: const Icon(
-              Icons.dark_mode,
-              color: kHighlightColor,
-              size: 35,
-            ),
-            onPressed: () {},
-          )
+          MoodButton(),
         ],
       ),
     );

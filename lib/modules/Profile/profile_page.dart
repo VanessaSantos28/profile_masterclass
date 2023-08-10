@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass_app_exercicios/modules/Profile/profile_habilities.dart';
+import 'package:masterclass_app_exercicios/modules/Profile/habilities_widget.dart';
 
 import '../../shared/contants.dart';
 import '../../widgets/app_bar_Widget.dart';
 
 import '../../widgets/bottom_button.dart';
 import 'perfil_card.dart';
-import 'favorite_technologies.dart';
+import 'favorite_technologies_widget.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});

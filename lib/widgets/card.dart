@@ -109,10 +109,7 @@ class CardActivities extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AnimationsPage()));
+                      Navigator.of(context).pushNamed("/animationsPage");
                     },
                     child: const Text(
                       "Ver mais",

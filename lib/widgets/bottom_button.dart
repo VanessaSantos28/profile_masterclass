@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../shared/app_images.dart';
-import '../shared/button.dart';
+import 'button_widget.dart';
 
 class BottomButton extends StatelessWidget {
   const BottomButton({

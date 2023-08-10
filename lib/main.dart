@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:masterclass_app_exercicios/modules/Profile/profile_page.dart';
+import 'package:masterclass_app_exercicios/modules/RepositoryPage/repository_page.dart';
 import 'package:masterclass_app_exercicios/modules/home/home_page.dart';
 
 import 'package:masterclass_app_exercicios/shared/contants.dart';
@@ -33,6 +35,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/splash': (_) => const SplashPage(),
         '/homePage': (_) => HomePage(),
+        '/repositoryPage': (_) => const RepositoryPage(),
+        '/profilePage': (_) => const ProfilePage(),
       },
     );
   }
