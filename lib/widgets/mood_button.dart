@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../controller/theme_controller.dart';
 import '../shared/contants.dart';
 
 class MoodButton extends StatefulWidget {
@@ -9,7 +10,6 @@ class MoodButton extends StatefulWidget {
   State<MoodButton> createState() => _MoodButtonState();
 }
 
-bool iconBool = false;
 IconData iconLight = Icons.sunny;
 
 class _MoodButtonState extends State<MoodButton> {

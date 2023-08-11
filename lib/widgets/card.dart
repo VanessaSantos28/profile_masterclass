@@ -21,7 +21,7 @@ class CardActivities extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
-        color: kCardColor,
+        color: Theme.of(context).cardColor,
         child: Container(
           padding: const EdgeInsets.all(8),
           width: 400,
@@ -109,7 +109,7 @@ class CardActivities extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                     ),
                     onPressed: () {
-                      Navigator.of(context).pushNamed("/animationsPage");
+                      Navigator.of(context).pushNamed("/animationPage");
                     },
                     child: const Text(
                       "Ver mais",
