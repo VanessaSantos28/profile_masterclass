@@ -13,7 +13,7 @@ class _MoodButtonState extends State<MoodButton> {
   Widget build(BuildContext context) {
     return IconButton(
       icon: Icon(
-        Icons.dark_mode,
+        Icons.nights_stay,
         color: Theme.of(context).colorScheme.secondary,
         size: 35,
       ),

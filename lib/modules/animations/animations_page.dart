@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../../shared/contants.dart';
-
 import '../../widgets/exercises_card.dart';
 import '../../widgets/mood_button.dart';
 
@@ -26,7 +23,7 @@ class AnimationsPage extends StatelessWidget {
                     style: Theme.of(context).textTheme.bodyLarge),
               ],
             ),
-            MoodButton(),
+            const MoodButton(),
           ],
         ),
       ),
