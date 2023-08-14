@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass_app_exercicios/controller/theme_controller.dart';
 import 'package:masterclass_app_exercicios/shared/app_images.dart';
 import 'package:masterclass_app_exercicios/shared/contants.dart';
+import 'package:masterclass_app_exercicios/shared/theme/dark/dark_colors.dart';
 
 import 'mood_button.dart';
 
@@ -15,7 +17,7 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: Theme.of(context).colorScheme.background,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -28,14 +30,16 @@ class AppBarWidget extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(appBarTitle, style: kHeadline1Text),
-              const Text("Flutterando Masterclass", style: kBodyText),
+              Text(appBarTitle,
+                  style: Theme.of(context).textTheme.displayLarge),
+              Text("Flutterando Masterclass",
+                  style: Theme.of(context).textTheme.bodyLarge),
             ],
           ),
           const SizedBox(
             width: 80,
           ),
-          MoodButton(),
+          const MoodButton(),
         ],
       ),
     );

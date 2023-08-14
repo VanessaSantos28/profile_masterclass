@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:masterclass_app_exercicios/shared/app_images.dart';
-import 'package:masterclass_app_exercicios/shared/contants.dart';
-
-import '../modules/animations/animations_page.dart';
 
 class CardActivities extends StatelessWidget {
   final String title;
@@ -37,16 +34,13 @@ class CardActivities extends StatelessWidget {
                     width: 43,
                     height: 43,
                     decoration: BoxDecoration(
-                        color: kPrimaryColor,
+                        color: Theme.of(context).colorScheme.primaryContainer,
                         borderRadius: BorderRadius.circular(30)),
                     child: Image.asset(imageCardTitle),
                   ),
-                  const SizedBox(
-                    width: 10,
-                  ),
                   Text(
                     title,
-                    style: kHeadline2Text,
+                    style: Theme.of(context).textTheme.displayMedium,
                   ),
                   const SizedBox(
                     width: 70,
@@ -54,14 +48,12 @@ class CardActivities extends StatelessWidget {
                   Text.rich(
                     TextSpan(
                         text: "Exercícios: ",
-                        style: kDescriptionText,
+                        style: Theme.of(context).textTheme.bodyMedium,
                         children: <TextSpan>[
                           TextSpan(
-                              text: numberExercises.toString(),
-                              style: const TextStyle(
-                                  fontFamily: "Montserrat",
-                                  fontSize: 12,
-                                  color: kHighlightColor))
+                            text: numberExercises.toString(),
+                            style: Theme.of(context).textTheme.bodySmall,
+                          )
                         ]),
                   ),
                 ],
@@ -71,10 +63,7 @@ class CardActivities extends StatelessWidget {
               ),
               Text(
                 description,
-                style: const TextStyle(
-                    fontFamily: "Montserrat",
-                    fontSize: 14,
-                    color: kDescriptionColor),
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
               const SizedBox(
                 height: 30,
@@ -88,37 +77,26 @@ class CardActivities extends StatelessWidget {
                         BoxDecoration(borderRadius: BorderRadius.circular(30)),
                     child: Image.asset(
                       AppImages.github,
-                      color: kHighlightColor,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
                   const SizedBox(
                     width: 5,
                   ),
-                  const Text(
+                  Text(
                     "Acessar código fonte",
-                    style: TextStyle(
-                        fontSize: 12,
-                        fontFamily: "Montserrat",
-                        color: kHighlightColor),
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                   const SizedBox(
-                    width: 78,
+                    width: 85,
                   ),
                   ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-                    ),
-                    onPressed: () {
-                      Navigator.of(context).pushNamed("/animationPage");
-                    },
-                    child: const Text(
-                      "Ver mais",
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: kHighlightColor,
-                      ),
-                    ),
-                  ),
+                      onPressed: () {
+                        Navigator.of(context).pushNamed("/animationPage");
+                      },
+                      child: const Text(
+                        "Ver mais",
+                      )),
                 ],
               ),
             ],

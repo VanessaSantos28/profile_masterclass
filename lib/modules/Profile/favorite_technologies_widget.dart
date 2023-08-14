@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:masterclass_app_exercicios/shared/app_images.dart';
-import 'package:masterclass_app_exercicios/shared/contants.dart';
 
 class FavoriteTechnologies extends StatelessWidget {
   const FavoriteTechnologies({super.key});
@@ -20,7 +19,7 @@ class FavoriteTechnologies extends StatelessWidget {
                   height: 100,
                   width: 94,
                   decoration: BoxDecoration(
-                    color: kCardColor,
+                    color: Theme.of(context).cardColor,
                     borderRadius: BorderRadius.circular(33),
                   ),
                   child: Column(
@@ -29,10 +28,11 @@ class FavoriteTechnologies extends StatelessWidget {
                       Image.asset(
                         AppImages.flutterIcon,
                         scale: 2.1,
+                        color: Theme.of(context).colorScheme.secondary,
                       ),
-                      const Text(
+                      Text(
                         "Flutter",
-                        style: TextStyle(fontSize: 12, color: kHighlightColor),
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
                   ),

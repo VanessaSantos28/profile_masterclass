@@ -15,6 +15,7 @@ class AppTheme with ChangeNotifier {
 
   void toggleTheme() {
     isDarkTheme = !isDarkTheme;
+    notifyListeners();
   }
 
   ThemeData get dark => darkTheme;

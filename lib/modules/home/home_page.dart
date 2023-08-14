@@ -33,14 +33,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff121517),
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: AppBarWidget(appBarTitle: "Atividades"),
       ),
-      body: SingleChildScrollView(
-        child: Column(children: modelsCard),
-      ),
+      body: Column(children: [
+        Expanded(
+          child: ListView(
+            children: modelsCard,
+          ),
+        )
+      ]),
       bottomNavigationBar: const BottomButton(),
     );
   }

@@ -8,20 +8,19 @@ class PerfilCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: kCardColor,
+      color: Theme.of(context).cardColor,
       child: Container(
         padding: const EdgeInsets.all(23),
         height: 320,
         width: 401,
         decoration: BoxDecoration(
-          color: kCardColor,
           borderRadius: BorderRadius.circular(30),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
-              backgroundColor: kBackgroundColor,
+              backgroundColor: Theme.of(context).colorScheme.background,
               maxRadius: 58,
               child: Padding(
                 padding: const EdgeInsets.all(4.0),
@@ -34,16 +33,16 @@ class PerfilCard extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const Text(
+            Text(
               "Vanessa Santos",
-              style: kHeadline2Text,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
             const SizedBox(
               height: 10,
             ),
-            const Text(
+            Text(
               "Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet congue consequat. In posuere, nunc sit amet laoreet blandit, urna sapien.",
-              style: kDescriptionText,
+              style: Theme.of(context).textTheme.bodyMedium,
               textAlign: TextAlign.center,
             ),
             const SizedBox(
@@ -55,6 +54,7 @@ class PerfilCard extends StatelessWidget {
                 Image.asset(
                   AppImages.wppLogo,
                   scale: 2,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 const SizedBox(
                   width: 25,
@@ -62,6 +62,7 @@ class PerfilCard extends StatelessWidget {
                 Image.asset(
                   AppImages.githubIcon,
                   scale: 2,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 const SizedBox(
                   width: 25,
@@ -69,6 +70,7 @@ class PerfilCard extends StatelessWidget {
                 Image.asset(
                   AppImages.instagram,
                   scale: 2,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 const SizedBox(
                   width: 25,
@@ -76,6 +78,7 @@ class PerfilCard extends StatelessWidget {
                 Image.asset(
                   AppImages.facebook,
                   scale: 2,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ],
             ),

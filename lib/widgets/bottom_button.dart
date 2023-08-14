@@ -23,17 +23,17 @@ class BottomButton extends StatelessWidget {
           Container(
             height: 46,
             width: .2,
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.secondary,
           ),
           Button(
-            iconImage: AppImages.githubIcon,
+            iconImage: AppImages.github,
             title: "Repositórios",
-            imageSize: 2,
+            imageSize: 7,
           ),
           Container(
             height: 46,
             width: .2,
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.secondary,
           ),
           Button(
             iconImage: AppImages.person,

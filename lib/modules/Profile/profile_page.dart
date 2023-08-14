@@ -14,7 +14,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: AppBarWidget(
@@ -31,13 +31,8 @@ class ProfilePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                "Tecnologias Favoritas",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: kHighlightColor,
-                ),
-              ),
+              Text("Tecnologias Favoritas",
+                  style: Theme.of(context).textTheme.bodyLarge),
               const SizedBox(
                 height: 8,
               ),
@@ -45,25 +40,21 @@ class ProfilePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
+              Text(
                 "Habilidades e Compentências",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: kHighlightColor,
-                ),
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
               const SizedBox(
                 height: 8,
               ),
               SizedBox(
-                height: 181,
+                height: 191,
                 width: 400,
                 child: Card(
-                  color: kCardColor,
+                  color: Theme.of(context).cardColor,
                   child: Container(
                       padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
                       decoration: BoxDecoration(
-                        color: kCardColor,
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: const Column(

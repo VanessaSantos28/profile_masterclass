@@ -15,7 +15,7 @@ class ProfileHabilities extends StatelessWidget {
       children: [
         Text(
           techName,
-          style: kDescriptionText,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
         Stack(
           children: [
@@ -23,14 +23,14 @@ class ProfileHabilities extends StatelessWidget {
               height: 9,
               width: 255,
               decoration: BoxDecoration(
-                  color: kProgressIndicator,
+                  color: Theme.of(context).colorScheme.tertiary,
                   borderRadius: BorderRadius.circular(8)),
             ),
             Container(
               height: 9,
               width: containerSizer,
               decoration: BoxDecoration(
-                color: kPrimaryColor,
+                color: Theme.of(context).colorScheme.primaryContainer,
                 borderRadius: BorderRadius.circular(8),
               ),
             ),

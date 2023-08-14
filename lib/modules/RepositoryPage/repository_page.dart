@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass_app_exercicios/shared/contants.dart';
-
 import '../../widgets/app_bar_Widget.dart';
 import '../../widgets/bottom_button.dart';
 
@@ -10,12 +8,12 @@ class RepositoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: const PreferredSize(
           preferredSize: Size.fromHeight(60),
           child: AppBarWidget(appBarTitle: "Repositórios")),
       body: Container(
-        color: kBackgroundColor,
+        color: Theme.of(context).colorScheme.background,
       ),
       bottomNavigationBar: const BottomButton(),
     );

@@ -23,7 +23,7 @@ class Button extends StatelessWidget {
               if (iconImage == AppImages.target) {
                 Navigator.of(context)
                     .pushNamedAndRemoveUntil("/homePage", (route) => false);
-              } else if (iconImage == AppImages.githubIcon) {
+              } else if (iconImage == AppImages.github) {
                 Navigator.of(context).pushNamedAndRemoveUntil(
                     "/repositoryPage", (route) => false);
               } else {
@@ -34,12 +34,11 @@ class Button extends StatelessWidget {
             child: Image.asset(
               iconImage,
               scale: imageSize,
-              color: kHighlightColor,
+              color: Theme.of(context).colorScheme.secondary,
             )),
         Text(
           title,
-          style: const TextStyle(
-              color: kHighlightColor, fontSize: 12, fontFamily: "Montserrat"),
+          style: Theme.of(context).textTheme.bodySmall,
         ),
       ],
     );

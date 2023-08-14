@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../shared/contants.dart';
-
 class ExercisesCard extends StatelessWidget {
   const ExercisesCard({super.key});
 
@@ -9,7 +7,7 @@ class ExercisesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: const EdgeInsets.all(8),
-      color: kCardColor,
+      color: Theme.of(context).cardColor,
       child: Container(
         padding: const EdgeInsets.all(8),
         height: 64,
@@ -22,18 +20,19 @@ class ExercisesCard extends StatelessWidget {
             Container(
               height: 33,
               width: 33,
-              decoration: const BoxDecoration(
-                  color: kPrimaryColor, shape: BoxShape.circle),
-              child: const Center(
+              decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.primaryContainer,
+                  shape: BoxShape.circle),
+              child: Center(
                 child: Text(
                   "1",
-                  style: kHeadline2Text,
+                  style: Theme.of(context).textTheme.displayMedium,
                 ),
               ),
             ),
-            const Text(
+            Text(
               "Exercícios 01",
-              style: kHeadline2Text,
+              style: Theme.of(context).textTheme.displayMedium,
             )
           ],
         ),

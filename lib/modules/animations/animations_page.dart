@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../shared/contants.dart';
 
 import '../../widgets/exercises_card.dart';
+import '../../widgets/mood_button.dart';
 
 class AnimationsPage extends StatelessWidget {
   const AnimationsPage({super.key});
@@ -10,27 +11,22 @@ class AnimationsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        backgroundColor: kBackgroundColor,
+        backgroundColor: Theme.of(context).colorScheme.background,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Column(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Animações", style: kHeadline1Text),
-                Text("Flutterando Masterclass", style: kBodyText),
+                Text("Animações",
+                    style: Theme.of(context).textTheme.displayLarge),
+                Text("Flutterando Masterclass",
+                    style: Theme.of(context).textTheme.bodyLarge),
               ],
             ),
-            IconButton(
-              icon: const Icon(
-                Icons.dark_mode,
-                color: kHighlightColor,
-                size: 35,
-              ),
-              onPressed: () {},
-            )
+            MoodButton(),
           ],
         ),
       ),

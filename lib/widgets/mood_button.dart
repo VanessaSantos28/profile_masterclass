@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../controller/theme_controller.dart';
-import '../shared/contants.dart';
+import 'package:masterclass_app_exercicios/controller/theme_controller.dart';
 
 class MoodButton extends StatefulWidget {
   const MoodButton({super.key});
@@ -10,18 +8,18 @@ class MoodButton extends StatefulWidget {
   State<MoodButton> createState() => _MoodButtonState();
 }
 
-IconData iconLight = Icons.sunny;
-
 class _MoodButtonState extends State<MoodButton> {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: const Icon(
+      icon: Icon(
         Icons.dark_mode,
-        color: kHighlightColor,
+        color: Theme.of(context).colorScheme.secondary,
         size: 35,
       ),
-      onPressed: () {},
+      onPressed: () {
+        AppTheme.instance.toggleTheme();
+      },
     );
   }
 }
